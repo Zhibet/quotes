@@ -16,14 +16,7 @@ require('dotenv').config();
 const app = express();
 
 // Connecting to mongoose with error handling
-mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/QuotesApp', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => {
-  console.log("Connected to MongoDB");
-}).catch(err => {
-  console.error("MongoDB connection error:", err);
-});
+mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://baha12:Guinea12@quotes.uo6wr.mongodb.net/?retryWrites=true&w=majority&appName=quotes').then(()=>{console.log('the atlas database is live')})
 
 // Templating
 app.engine('ejs', engine);

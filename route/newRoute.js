@@ -5,13 +5,12 @@ const Card = require('../models/cardModel');
 const isLoggedIn = require('../islogIn');
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || '=mongodb+srv://baha12:Guinea12@quotes.uo6wr.mongodb.net/?retryWrites=true&w=majority&appName=quotes')
+mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://baha12:Guinea12@quotes.uo6wr.mongodb.net/?retryWrites=true&w=majority&appName=quotes')
 
 
 // Route to get home data
 newRoute.get('/new',isLoggedIn, async (req, res) => {
   try {
-   
     res.render('newForm'); 
   } catch (err) {
     console.error('Error fetching data:', err);
@@ -27,7 +26,6 @@ newRoute.post('/new',async(req,res)=>{
             paragraph,
             category
         })
-        console.log(req.body)
         await newCard.save().then(()=>{console.log(`the new card is ...${newCard}`)})
         res.redirect('/')
     } catch (error) {
