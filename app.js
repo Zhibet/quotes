@@ -39,7 +39,7 @@ app.use(express.json());
 
 // Session middleware
 app.use(session({
-  secret: 'secret',
+  secret: process.env.secret,
   resave: false,
   saveUninitialized: true,
   cookie: { secure: process.env.NODE_ENV === 'production' },

@@ -23,7 +23,7 @@ const homeData = new Home({
     category_three: 't. technology',
     category_four: 'c. cool'
   },
-  title: 'Example Title',
+  title: 'welcome',
 });
 
 Home.deleteMany({})

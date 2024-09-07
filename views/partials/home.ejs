@@ -12,14 +12,14 @@
                     </ul>
                 </div>
                 <div class="col-md-10 mb-3">
-                    <h5 class="text-center"><%=data[0].title%></h5>
+                    <h5 class="text-center text-capitalize"><%=data[0].title%>, <%=username%></h5>
                     <div class="row row-cols-1 row-cols-md-3 g-3 p-3 m-3">
                         <% card_data.forEach(card => { %>
                         <div class="col">
-                            <div class="card  shadow-sm p-3" id="card">
+                            <div class="card p-3" id="card">
                                 <h6 class="text-center mt-3"><%= card.title %></h6>
-                                <p class="text-center"><%= card.paragraph %></p>
-                                <div class="d-flex justify-content-between align-items-center">
+                                <p class="text-center bg-light"><%= card.paragraph %></p>
+                                <div class="d-flex justify-content-end">
                                     <a href="/new/<%= card._id %>" class="text-danger"><i class="bi bi-trash-fill"></i></a>
                                     <b class="badge"><%= card.category %></b>
                                 </div>
