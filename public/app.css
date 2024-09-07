@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color:hsl(0, 0%, 100%);
+}
+
+#card{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+}
+
+#card p{
+   text-shadow: 0 1px 2px rgb(232, 98, 98);
+   height: 50%;
+}
+
+#card a{
+    text-align: end;
+    text-decoration: none;
+}
+
+i{
+    font-size: 1.7em;
+    margin-right: 1em;
+    position: absolute;
+    bottom: 60px;
+    right: 20px;
+}
+
+b{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    text-align: center;
+    color: red;
+    background-color: rgb(255, 0, 0);
+    text-transform: capitalize;
+}
+
+.category li{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: capitalize;
+    text-align: end;
+    color: rgb(27, 115, 209);
+}
+.category li::first-letter{
+    color: red;
+    margin-right: 5px;
+    font-style: italic;
+}

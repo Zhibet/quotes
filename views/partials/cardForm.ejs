@@ -1,0 +1,30 @@
+<div class="container">
+        <div class="row">
+            <div class="col-md-4 mx-auto mt-5 card p-5 rounded">
+                <h5 class="text-center text-capitalize">item entry</h5>
+                <form action="/new" method="post">
+                    <div class="mb-3">
+                        <label for="title" class="form-label" class="form-control">title</label>
+                        <input type="text" class="form-control" id="title" name="title">
+                    </div>
+                    <div class="mb-3">
+                        <label for="category" class="form-label" class="form-control">category</label>
+                        <select class="form-select" aria-label="Default select example" id="category" name="category">
+                            <option selected>Open this select menu</option>
+                            <option value="l">l</option>
+                            <option value="r">r</option>
+                            <option value="t">t</option>
+                            <option value="c">c</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="paragraph" class="form-label">paragraph</label>
+                        <textarea class="form-control" id="paragraph" rows="3" name="paragraph"></textarea>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-center">
+                        <button class="btn btn-primary text-uppercase">enter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>

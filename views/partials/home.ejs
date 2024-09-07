@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-10 mx-auto p-3">
+            <div class="row row-col-1 g-0">
+                <div class="col-md-2 mb-3">
+                    <h5 class="text-end text-capitalize"><%=data[0].category.category_title%></h5>
+                    <ul class="list-unstyled text-center category">
+                        <li class="mb-3"><%=data[0].category.category_one%></li>
+                        <li class="mb-3"><%=data[0].category.category_two%></li>
+                        <li class="mb-3"><%=data[0].category.category_three%></li>
+                        <li class="mb-3"><%=data[0].category.category_four%></li>
+                    </ul>
+                </div>
+                <div class="col-md-10 mb-3">
+                    <h5 class="text-center"><%=data[0].title%></h5>
+                    <div class="row row-cols-1 row-cols-md-3 g-3 p-3 m-3">
+                        <% card_data.forEach(card => { %>
+                        <div class="col">
+                            <div class="card  shadow-sm p-3" id="card">
+                                <h6 class="text-center mt-3"><%= card.title %></h6>
+                                <p class="text-center"><%= card.paragraph %></p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="/new/<%= card._id %>" class="text-danger"><i class="bi bi-trash-fill"></i></a>
+                                    <b class="badge"><%= card.category %></b>
+                                </div>
+                            </div>
+                        </div>
+                        <% }); %>
+                    </div>
+                    <div class="d-flex justify-content-end w-100 p-3">
+                        <a href="/new" class="btn btn-success text-capitalize">add card</a>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
