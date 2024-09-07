@@ -5,7 +5,7 @@ const Card = require('../models/cardModel');
 const isLoggedIn = require('../islogIn');
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/QuotesApp')
+mongoose.connect(process.env.MONGO_URI || '=mongodb+srv://baha12:Guinea12@quotes.uo6wr.mongodb.net/?retryWrites=true&w=majority&appName=quotes')
 
 
 // Route to get home data
