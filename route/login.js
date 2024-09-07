@@ -6,7 +6,7 @@ const user = require('../models/user');
 
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://baha12:Guinea12@quotes.uo6wr.mongodb.net/?retryWrites=true&w=majority&appName=quotes')
+mongoose.connect(process.env.MONGO_URI)
 
 loginRoute.get('/login',(req,res)=>{
     res.render('login')

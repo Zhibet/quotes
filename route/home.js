@@ -5,7 +5,7 @@ const homeData = require('../models/homeModel');
 const cardData = require('../models/cardModel');
 
 // Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI || 'mongodb+srv://baha12:Guinea12@quotes.uo6wr.mongodb.net/?retryWrites=true&w=majority&appName=quotes');
+mongoose.connect(process.env.MONGO_URI);
 
 // Route to get home data
 homeRoute.get('/', async (req, res) => {
